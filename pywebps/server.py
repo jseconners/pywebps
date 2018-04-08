@@ -4,10 +4,10 @@ from flask import Flask, abort
 
 app = Flask(__name__)
 
-from plots import testplot
+from plots import timeseries
 
 available_plots = {
-    'test': testplot
+    'timeseries': timeseries
 }
 
 
@@ -16,7 +16,7 @@ def welcome():
     return "Welcome"
 
 
-@app.route('/<plot>', methods=['POST'])
+@app.route('/<plot>', methods=['GET', 'POST'])
 def plot(plot):
     if (plot in available_plots):
         fig = available_plots[plot].plot()
