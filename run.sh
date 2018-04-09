@@ -1,0 +1,1 @@
+FLASK_APP=pywebps/server.py flask run
