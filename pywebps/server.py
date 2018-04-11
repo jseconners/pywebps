@@ -1,6 +1,9 @@
 import os
 import utils
-from flask import Flask, abort
+import json
+from flask import Flask, abort, request
+
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -16,10 +19,19 @@ def welcome():
     return "Welcome"
 
 
-@app.route('/<plot>', methods=['GET', 'POST'])
+@app.route('/<plot>', methods=['POST'])
 def plot(plot):
     if (plot in available_plots):
-        fig = available_plots[plot].plot()
+        try:
+            config_obj = json.loads(request.data)
+        except:
+            abort(404)
+
+        data = pd.DataFrame(config_obj['data'])
+        fig = available_plots[plot].plot(data)
+
         return utils.send_fig(fig)
+
+
     else:
         abort(404)
