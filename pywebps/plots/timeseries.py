@@ -8,5 +8,5 @@ def plot(df):
     # fig = plt.figure() and then ax = fig.add_subplot(111)
     fig, ax = plt.subplots()
 
-    ax.plot(df[0], df[1])
+    ax.scatter(df['temp'], df['salinity'])
     return fig

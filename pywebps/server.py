@@ -25,9 +25,9 @@ def plot(plot):
         try:
             config_obj = json.loads(request.data)
         except:
-            abort(404)
+            abort(400)
 
-        data = pd.DataFrame(config_obj['data'])
+        data = pd.read_csv(config_obj['data'])
         fig = available_plots[plot].plot(data)
 
         return utils.send_fig(fig)
