@@ -27,8 +27,8 @@ def plot(plot):
         except:
             abort(400)
 
-        data = pd.read_csv(config_obj['data'])
-        fig = available_plots[plot].plot(data)
+        # get plot figure
+        fig = available_plots[plot].plot(config_obj)
 
         return utils.send_fig(fig)
 
