@@ -28,7 +28,6 @@ Post data:
     		"y": {
     			"col": "temp",
     			"label": "Temp C"
-
     		}
     	}
     }
@@ -41,6 +40,7 @@ Post data:
 ###### Single data line
 ![screenshot](https://raw.githubusercontent.com/jseconners/pywebps/master/docs/images/ts.png)
 
+
      {
     	"data": "http://example.com/mydata.csv",
     	"config": {
@@ -54,7 +54,6 @@ Post data:
     			{
     			    "col": "temp",
     			    "label": "Temp C"
-
     		    }
     		]
     	}
@@ -63,6 +62,7 @@ Post data:
 ###### Multiple data lines
 ![screenshot](https://raw.githubusercontent.com/jseconners/pywebps/master/docs/images/ts_subplots.png)
 
+
      {
     	"data": "http://example.com/mydata.csv",
     	"config": {
@@ -76,13 +76,11 @@ Post data:
     			{
     			    "col": "temp",
     			    "label": "Temp C"
-
     		    },
-    			{
-    			    "col": "ws",
-    			    "label": "Wind Speed (knts)"
-
-    		    }
+                {
+                    "col": "ws",
+                    "label": "Wind Speed (knts)"
+                }
     		]
     	}
     }
