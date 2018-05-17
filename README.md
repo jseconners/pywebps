@@ -39,6 +39,7 @@ Post data:
 ***
 
 <center><h6>Single data line</h6></center>
+
 ![screenshot](https://raw.githubusercontent.com/jseconners/pywebps/master/docs/images/ts.png)
 
      {
@@ -66,6 +67,7 @@ Post data:
     }
 
 <center><h6>Multiple data lines</h6></center>
+
 ![screenshot](https://raw.githubusercontent.com/jseconners/pywebps/master/docs/images/ts_subplots.png)
 
      {
