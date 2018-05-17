@@ -29,18 +29,19 @@ def plot(config):
     # fig = plt.figure() and then ax = fig.add_subplot(111)
     fig, ax = plt.subplots(figsize=plot_cfg['size'])
 
-    #read data from csv
+    # read data from csv
     data = pd.read_csv(data_url, usecols=date_cols + y_cols, parse_dates={'datetime' : date_cols})
 
-    #set date as index
+    # set date as index
     data.set_index(data['datetime'], inplace=True)
     del data['datetime']
 
-    #plot data
-    data.plot(ax=ax, subplots=True)
+    # plot data
+    data.plot(ax=ax, subplots=True, fontsize=9)
 
-    #ax.set_xlabel(x['label'])
-    ax.legend(y_lbls)
+    for i in range(len(plt.gcf().axes)):
+        plt.gcf().axes[i].legend([y_lbls[i]])
+        plt.gcf().axes[i].set_xlabel(x['label'])
 
     plt.tight_layout()
 

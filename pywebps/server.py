@@ -7,10 +7,13 @@ import pandas as pd
 
 app = Flask(__name__)
 
-from plots import timeseries
+# import plots
+from plots import timeseries, scatter
 
+# map available plot names to modules
 available_plots = {
-    'timeseries': timeseries
+    'timeseries': timeseries,
+    'scatter': scatter
 }
 
 
