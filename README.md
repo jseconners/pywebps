@@ -1,5 +1,5 @@
 # pywebps
-Python web plotting service
+Really basic Python web plotting service
 
 ### Author
 
