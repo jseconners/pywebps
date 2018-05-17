@@ -1,6 +1,7 @@
 # pywebps
 Really basic Python web plotting service.
 
+
 ## Overview
 pywebps is served using flask and builds plots using matplotlib and pandas. It's
 a really simple microservice that takes a URL to a CSV file and some plot
@@ -36,10 +37,8 @@ Post data:
 
 
 ### Time series
-***
 
-<center><h6>Single data line</h6></center>
-
+###### Single data line
 ![screenshot](https://raw.githubusercontent.com/jseconners/pywebps/master/docs/images/ts.png)
 
      {
@@ -66,8 +65,7 @@ Post data:
     	}
     }
 
-<center><h6>Multiple data lines</h6></center>
-
+###### Multiple data lines
 ![screenshot](https://raw.githubusercontent.com/jseconners/pywebps/master/docs/images/ts_subplots.png)
 
      {
@@ -119,8 +117,6 @@ An array of objects (see table below) for each line to plot agains the x-axis. E
 
 
 ### Scatter
-***
-
 ![screenshot](https://raw.githubusercontent.com/jseconners/pywebps/master/docs/images/scatter.png)
 
     {
