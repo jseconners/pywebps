@@ -55,11 +55,6 @@ Post data:
     			    "col": "temp",
     			    "label": "Temp C"
 
-    		    },
-    			{
-    			    "col": "ws",
-    			    "label": "Wind Speed (knts)"
-
     		    }
     		]
     	}
